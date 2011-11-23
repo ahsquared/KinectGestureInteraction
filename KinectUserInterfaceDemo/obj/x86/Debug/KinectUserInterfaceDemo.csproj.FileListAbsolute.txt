@@ -1,0 +1,49 @@
+C:\Users\andre.h\Documents\Kinect\Kinect-XBOX Demo\KinectUserInterfaceDemo\bin\Debug\KinectUserInterfaceDemo.exe
+C:\Users\andre.h\Documents\Kinect\Kinect-XBOX Demo\KinectUserInterfaceDemo\bin\Debug\KinectUserInterfaceDemo.pdb
+C:\Users\andre.h\Documents\Kinect\Kinect-XBOX Demo\KinectUserInterfaceDemo\bin\Debug\Coding4Fun.Kinect.Wpf.dll
+C:\Users\andre.h\Documents\Kinect\Kinect-XBOX Demo\KinectUserInterfaceDemo\bin\Debug\Microsoft.Expression.Drawing.dll
+C:\Users\andre.h\Documents\Kinect\Kinect-XBOX Demo\KinectUserInterfaceDemo\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\andre.h\Documents\Kinect\Kinect-XBOX Demo\KinectUserInterfaceDemo\obj\x86\Debug\MainWindow.baml
+C:\Users\andre.h\Documents\Kinect\Kinect-XBOX Demo\KinectUserInterfaceDemo\obj\x86\Debug\MainWindow.g.cs
+C:\Users\andre.h\Documents\Kinect\Kinect-XBOX Demo\KinectUserInterfaceDemo\obj\x86\Debug\App.g.cs
+C:\Users\andre.h\Documents\Kinect\Kinect-XBOX Demo\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo_MarkupCompile.cache
+C:\Users\andre.h\Documents\Kinect\Kinect-XBOX Demo\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.g.resources
+C:\Users\andre.h\Documents\Kinect\Kinect-XBOX Demo\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.Properties.Resources.resources
+C:\Users\andre.h\Documents\Kinect\Kinect-XBOX Demo\KinectUserInterfaceDemo\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\andre.h\Documents\Kinect\Kinect-XBOX Demo\KinectUserInterfaceDemo\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\andre.h\Documents\Kinect\Kinect-XBOX Demo\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.exe
+C:\Users\andre.h\Documents\Kinect\Kinect-XBOX Demo\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.pdb
+C:\Users\andre.h\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.exe
+C:\Users\andre.h\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.pdb
+C:\Users\andre.h\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\bin\Debug\KinectUserInterfaceDemo.exe
+C:\Users\andre.h\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\bin\Debug\KinectUserInterfaceDemo.pdb
+C:\Users\andre.h\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\bin\Debug\Microsoft.Expression.Drawing.dll
+C:\Users\andre.h\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\andre.h\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\MainWindow.baml
+C:\Users\andre.h\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\MainWindow.g.cs
+C:\Users\andre.h\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\App.g.cs
+C:\Users\andre.h\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo_MarkupCompile.cache
+C:\Users\andre.h\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.g.resources
+C:\Users\andre.h\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\andre.h\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\andre.h\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\DTWGestureRecognition.Properties.Resources.resources
+C:\Users\Andre\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.exe
+C:\Users\Andre\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.pdb
+C:\Users\Andre\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\bin\Debug\KinectUserInterfaceDemo.exe
+C:\Users\Andre\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\bin\Debug\KinectUserInterfaceDemo.pdb
+C:\Users\Andre\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\bin\Debug\Coding4Fun.Kinect.Wpf.dll
+C:\Users\Andre\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\bin\Debug\Microsoft.Expression.Drawing.dll
+C:\Users\Andre\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Andre\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\MainWindow.baml
+C:\Users\Andre\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Andre\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\App.g.cs
+C:\Users\Andre\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo_MarkupCompile.cache
+C:\Users\Andre\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.g.resources
+C:\Users\Andre\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\DTWGestureRecognition.Properties.Resources.resources
+C:\Users\Andre\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Andre\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Andre\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo_Content.g.cs
+G:\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.exe
+G:\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.pdb
+C:\Users\andre.h\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo_Content.g.cs
+C:\Users\andre.h\Documents\Kinect\Kinect-Hover+DTW\KinectUserInterfaceDemo\bin\Debug\Microsoft.Expression.Drawing.xml
