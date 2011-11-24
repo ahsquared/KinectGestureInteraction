@@ -6,15 +6,15 @@
         Background="#1E1C37"
 		xmlns:Controls="clr-namespace:Coding4Fun.Kinect.Wpf.Controls;assembly=Coding4Fun.Kinect.Wpf"
 		Title="Kinect Demo" Height="1045" Width="1920">
-	<Grid x:Name="theGrid">
+    <Grid x:Name="theGrid">
         <Canvas Background="#141717" Width="1900">
-			<Controls:HoverButton Margin="0" Padding="0" x:Name="kinectButton" ImageSize="64"                                           
+            <Controls:HoverButton Margin="0" Padding="0" x:Name="kinectButton" ImageSize="64"                                           
                                 ImageSource="/Resources/Hand_Basic.png"  
                                 ActiveImageSource="/Resources/Hand_Basic.png" 
-                                TimeInterval="2000"  Canvas.Left="253" Canvas.Top="910" Panel.ZIndex="1000" />
+                                TimeInterval="1000"  Canvas.Left="253" Canvas.Top="910" Panel.ZIndex="1000" />
 
 
-			<!--<TextBlock Canvas.Left="246" Canvas.Top="175" FontSize="46" Foreground="White" Height="101" Name="textBlock3" Text="Kinect Demo" Width="448" />-->
+            <!--<TextBlock Canvas.Left="246" Canvas.Top="175" FontSize="46" Foreground="White" Height="101" Name="textBlock3" Text="Kinect Demo" Width="448" />-->
             <Button Canvas.Left="30" Canvas.Top="20" Height="90" Name="toggleControls" Width="180" Background="#4B5657" 
 		HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="toggleControls_Click">
                 <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Controls" Width="155" />
@@ -22,25 +22,23 @@
             <Button Canvas.Left="30" Canvas.Top="132" Height="150" Name="button1" Width="180" Background="#4B5657" 
 		HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="button1_Click">
                 <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Button 1" Width="155" />
-                
             </Button>
-<Button Canvas.Left="30" Canvas.Top="303" Height="150" Name="button2" Width="180" Background="#969481" 
+            <Button Canvas.Left="30" Canvas.Top="303" Height="150" Name="button2" Width="180" Background="#969481" 
 		HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="button2_Click">
                 <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Button 2" Width="155" />
-</Button>
-<Button Canvas.Left="30" Canvas.Top="480" Background="#D2C9B0" Height="150" Name="button3" Width="180" 
+            </Button>
+            <Button Canvas.Left="30" Canvas.Top="480" Background="#D2C9B0" Height="150" Name="button3" Width="180" 
 		HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="button3_Click">
                 <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Button 3" Width="155" />
-</Button>
-<Button Canvas.Left="30" Canvas.Top="653" Background="#F4E3C1" Height="150" Name="button4" Width="180
-        " 
+            </Button>
+            <Button Canvas.Left="30" Canvas.Top="653" Background="#F4E3C1" Height="150" Name="button4" Width="180" 
 		HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="button4_Click">
                 <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Button 4" Width="155" />
-</Button>
-<Button Canvas.Left="30" Canvas.Top="827" Background="#59676E" Height="150" Name="button5" Width="180" 
+            </Button>
+            <Button Canvas.Left="30" Canvas.Top="827" Background="#59676E" Height="150" Name="button5" Width="180" 
 		HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="button5_Click">
                 <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Button 5" Width="155" />
-</Button>
+            </Button>
             <Button Canvas.Left="1680" Canvas.Top="48" Background="#731311" Height="150" Name="buttonExit" Width="180" 
                     HorizontalAlignment="Right" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="buttonExit_Click">
                 <TextBlock FontSize="36" Foreground="#ffffff" Height="64" Text="Quit" Width="95" />
@@ -53,8 +51,8 @@
                 <MenuItem Header="_Gesture"></MenuItem>
             </Menu>-->
         </Canvas>
-<Image Name="videoImage" Height="240" Width="320" HorizontalAlignment="Right" VerticalAlignment="Bottom"></Image>
-		<TextBlock FontSize="24" Foreground="White" Height="35" x:Name="videoTextTip" 
+        <Image Name="videoImage" Height="240" Width="320" HorizontalAlignment="Right" VerticalAlignment="Bottom"></Image>
+        <TextBlock FontSize="24" Foreground="White" Height="35" x:Name="videoTextTip" 
 				   Text="Video" Width="289" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,20,240" />
         <Image Name="depthImage" Height="240" Width="320" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,330,0"></Image>
         <TextBlock FontSize="24" Foreground="White" Height="35" x:Name="depthTextTip" 

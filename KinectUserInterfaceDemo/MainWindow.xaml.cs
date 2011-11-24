@@ -493,8 +493,8 @@ namespace DTWGestureRecognition
 							? rightHand
 							: leftHand;
 
-			float posX = joinCursorHand.ScaleTo((int)SystemParameters.PrimaryScreenWidth, (int)SystemParameters.PrimaryScreenHeight).Position.X;
-			float posY = joinCursorHand.ScaleTo((int)SystemParameters.PrimaryScreenWidth, (int)SystemParameters.PrimaryScreenHeight).Position.Y;
+			float posX = joinCursorHand.ScaleTo((int)SystemParameters.PrimaryScreenWidth, (int)SystemParameters.PrimaryScreenHeight, SkeletonMaxX, SkeletonMaxY).Position.X;
+            float posY = joinCursorHand.ScaleTo((int)SystemParameters.PrimaryScreenWidth, (int)SystemParameters.PrimaryScreenHeight, SkeletonMaxX, SkeletonMaxY).Position.Y;
 
 			Joint scaledCursorJoint = new Joint
 									{
@@ -576,9 +576,19 @@ namespace DTWGestureRecognition
         //mediaElement1.Play();
 
 
+        private MediaPlayer player = new MediaPlayer();
+        //MediaTimeline MTimeline = new MediaTimeline(new Uri("Resources/OnTheWing.mp3", UriKind.Relative));
+        //MTimeline.CurrentTimeInvalidated += new EventHandler(MTimeline_CurrentTimeInvalidated);
+        //player.Clock = MTimeline.CreateClock(true) as MediaClock;
+        //player.Clock.Controller.Stop();
+
+
 		private void button1_Click(object sender, RoutedEventArgs e)
 		{
-
+            player.Open(new Uri("Resources/OnTheWing.mp3", UriKind.Relative));
+            //player.Clock = new MediaTimeline
+            //dtwTextOutput.Text = player.Clock
+            player.Play();
 		}
 
 		private void button2_Click(object sender, RoutedEventArgs e)

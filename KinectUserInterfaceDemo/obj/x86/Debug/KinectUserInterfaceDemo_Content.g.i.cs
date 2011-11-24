@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/01%20-%20(the%20grid)%20on%20the%20wing.mp3")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/onthewing.mp3")]
 
 
