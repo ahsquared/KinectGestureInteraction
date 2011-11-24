@@ -77,6 +77,8 @@ C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Microsoft.Expression.Drawing.xml
-C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\music.mp3
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\KinectUserInterfaceDemo.exe
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\KinectUserInterfaceDemo.pdb
+C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\afrojams.mp3
+C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\berimbau.mp3
+C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\vishnu.mp3

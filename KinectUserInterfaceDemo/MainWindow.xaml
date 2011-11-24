@@ -21,15 +21,15 @@
             </Button>
             <Button Canvas.Left="30" Canvas.Top="132" Height="150" Name="button1" Width="180" Background="#4B5657" 
 		HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="button1_Click">
-                <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Button 1" Width="155" />
+                <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Afro Jams" Width="155" />
             </Button>
             <Button Canvas.Left="30" Canvas.Top="303" Height="150" Name="button2" Width="180" Background="#969481" 
 		HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="button2_Click">
-                <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Button 2" Width="155" />
+                <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Berimbau" Width="155" />
             </Button>
             <Button Canvas.Left="30" Canvas.Top="480" Background="#D2C9B0" Height="150" Name="button3" Width="180" 
 		HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="button3_Click">
-                <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Button 3" Width="155" />
+                <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Jazz" Width="155" />
             </Button>
             <Button Canvas.Left="30" Canvas.Top="653" Background="#F4E3C1" Height="150" Name="button4" Width="180" 
 		HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="button4_Click">

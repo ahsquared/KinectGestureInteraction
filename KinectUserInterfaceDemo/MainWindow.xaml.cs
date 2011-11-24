@@ -598,36 +598,25 @@ namespace DTWGestureRecognition
 			videoImage.Source = source;
 		}
 
-        //private MediaElement mediaElement1 = new MediaElement();
-        //mediaElement1.LoadedBehavior = MediaState.Manual;
-        //mediaElement1.Source = new Uri(@"C:\Music\MySong.mp3", UriKind.RelativeOrAbsolute);
-        //mediaElement1.Play();
 
 
         private MediaPlayer player = new MediaPlayer();
-        //MediaTimeline MTimeline = new MediaTimeline(new Uri("Resources/OnTheWing.mp3", UriKind.Relative));
-        //MTimeline.CurrentTimeInvalidated += new EventHandler(MTimeline_CurrentTimeInvalidated);
-        //player.Clock = MTimeline.CreateClock(true) as MediaClock;
-        //player.Clock.Controller.Stop();
 
 
 		private void button1_Click(object sender, RoutedEventArgs e)
 		{
-            player.Open(new Uri("Resources/music.mp3", UriKind.Relative));
-            //player.Clock = new MediaTimeline
-            //dtwTextOutput.Text = player.Clock
-            player.Play();
+            player.Open(new Uri("Resources/afrojams.mp3", UriKind.Relative));
 		}
 
 		private void button2_Click(object sender, RoutedEventArgs e)
 		{
-			MessageBox.Show("Button 2 Clicked");
-		}
+            player.Open(new Uri("Resources/berimbau.mp3", UriKind.Relative));
+        }
 
 		private void button3_Click(object sender, RoutedEventArgs e)
 		{
-			MessageBox.Show("Button 3 Clicked");
-		}
+            player.Open(new Uri("Resources/vishnu.mp3", UriKind.Relative));
+        }
 
 		private void button4_Click(object sender, RoutedEventArgs e)
 		{
@@ -933,15 +922,15 @@ namespace DTWGestureRecognition
             {
                 case SpeechRecognizer.Verbs.Pause:
                     dtwTextOutput.Text = "Pause";
+                    player.Pause();
                     break;
                 case SpeechRecognizer.Verbs.Resume:
-                    dtwTextOutput.Text = "Resume";
+                    dtwTextOutput.Text = "Play";
+                    player.Play();
                     break;
                 case SpeechRecognizer.Verbs.Reset:
                     dtwTextOutput.Text = "Reset";
-                    break;
-                case SpeechRecognizer.Verbs.DoShapes:
-                    dtwTextOutput.Text = "Do Shapes";
+                    player.Stop();
                     break;
                 case SpeechRecognizer.Verbs.RandomColors:
                     dtwTextOutput.Text = "Random Colors";
