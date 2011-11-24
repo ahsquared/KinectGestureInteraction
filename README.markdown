@@ -6,7 +6,9 @@ This is a project for me to learn WPF (c#) and the Microsoft Kinect SDK.
 I am also using it to learn about Dynamic Time Warping.
 
 I have borrowed from a couple different projects to create this one.
+
 1.  [Basic WPF project structure from Doug Rathbone at www.diaryofaninja.com](http://www.diaryofaninja.com/blog/2011/10/19/remaking-the-xbox-kinect-hub--an-introduction-to-new-user-intErfaces)
+
 2.  [Dynamic Time Warping from kinectdtw.codeplex.com](http://kinectdtw.codeplex.com/)
 
 LICENSE
