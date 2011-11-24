@@ -51,7 +51,8 @@ namespace DTWGestureRecognition.Speech
             RandomColors,
             Reset,
             Pause,
-            Resume
+            Resume,
+            Quit
         };
 
         struct WhatSaid
@@ -118,6 +119,7 @@ namespace DTWGestureRecognition.Speech
             {"Play", new WhatSaid()             {verb=Verbs.Resume}},
             {"Start", new WhatSaid()            {verb=Verbs.Resume}},
             {"Go", new WhatSaid()               {verb=Verbs.Resume}},
+            {"Quit", new WhatSaid()             {verb=Verbs.Quit}}
         };
         #endregion Grammar Data
 

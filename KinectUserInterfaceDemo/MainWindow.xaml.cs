@@ -941,6 +941,10 @@ namespace DTWGestureRecognition
                 case SpeechRecognizer.Verbs.Bigger:
                     dtwTextOutput.Text = "Bigger";
                     break;
+                case SpeechRecognizer.Verbs.Quit:
+                    dtwTextOutput.Text = "Quit";
+                    this.Close();
+                    break;
             }
         }
         #endregion Kinect Speech processing
