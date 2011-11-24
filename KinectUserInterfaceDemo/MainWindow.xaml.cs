@@ -13,8 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Coding4Fun.Kinect.Wpf.Controls;
 using Coding4Fun.Kinect.Wpf;
+using Microsoft.Research.Kinect.Audio;
 using Microsoft.Research.Kinect.Nui;
 using Nui = Microsoft.Research.Kinect.Nui;
+using DTWGestureRecognition.Speech;
 
 namespace DTWGestureRecognition
 {
@@ -168,6 +170,10 @@ namespace DTWGestureRecognition
 
         private static bool _controlsOpen = false;
 
+        // Speech Recogniser
+        SpeechRecognizer speechRecognizer = null;
+
+
 		public MainWindow()
 		{
 			InitializeComponent();
@@ -178,6 +184,7 @@ namespace DTWGestureRecognition
 			_runtime.VideoFrameReady += runtime_VideoFrameReady;
 			_runtime.SkeletonFrameReady += SkeletonFrameReady;
 		}
+
 
 		void MainWindow_Loaded(object sender, RoutedEventArgs e)
 		{
@@ -224,11 +231,32 @@ namespace DTWGestureRecognition
 
             Skeleton3DDataExtract.Skeleton3DdataCoordReady += NuiSkeleton3DdataCoordReady;
 
+            speechRecognizer = SpeechRecognizer.Create();         //returns null if problem with speech prereqs or instantiation.
+            if (speechRecognizer != null)
+            {
+                speechRecognizer.Start(new KinectAudioSource());  //KinectSDK TODO: expose Runtime.AudioSource to return correct audiosource.
+                speechRecognizer.SaidSomething += new EventHandler<SpeechRecognizer.SaidSomethingEventArgs>(recognizer_SaidSomething);
+            }
+            else
+            {
+                dtwTextOutput.Text = "No Speech";
+                speechRecognizer = null;
+            }
+
+
 		}
 		void MainWindow_Unloaded(object sender, RoutedEventArgs e)
 		{
 			_isClosing = true;
 			_runtime.Uninitialize();
+            if (speechRecognizer != null)
+            {
+                speechRecognizer.Stop();
+                speechRecognizer.SaidSomething -= new EventHandler<SpeechRecognizer.SaidSomethingEventArgs>(recognizer_SaidSomething);
+                speechRecognizer = null;
+            }
+
+
             Environment.Exit(0);
 		}
 		private void InitializeButtons()
@@ -585,7 +613,7 @@ namespace DTWGestureRecognition
 
 		private void button1_Click(object sender, RoutedEventArgs e)
 		{
-            player.Open(new Uri("Resources/OnTheWing.mp3", UriKind.Relative));
+            player.Open(new Uri("Resources/music.mp3", UriKind.Relative));
             //player.Clock = new MediaTimeline
             //dtwTextOutput.Text = player.Clock
             player.Play();
@@ -896,6 +924,38 @@ namespace DTWGestureRecognition
             }
 
         }
+
+
+        #region Kinect Speech processing
+        void recognizer_SaidSomething(object sender, SpeechRecognizer.SaidSomethingEventArgs e)
+        {
+            switch (e.Verb)
+            {
+                case SpeechRecognizer.Verbs.Pause:
+                    dtwTextOutput.Text = "Pause";
+                    break;
+                case SpeechRecognizer.Verbs.Resume:
+                    dtwTextOutput.Text = "Resume";
+                    break;
+                case SpeechRecognizer.Verbs.Reset:
+                    dtwTextOutput.Text = "Reset";
+                    break;
+                case SpeechRecognizer.Verbs.DoShapes:
+                    dtwTextOutput.Text = "Do Shapes";
+                    break;
+                case SpeechRecognizer.Verbs.RandomColors:
+                    dtwTextOutput.Text = "Random Colors";
+                    break;
+                case SpeechRecognizer.Verbs.Colorize:
+                    dtwTextOutput.Text = "Colorize";
+                    break;
+                case SpeechRecognizer.Verbs.Bigger:
+                    dtwTextOutput.Text = "Bigger";
+                    break;
+            }
+        }
+        #endregion Kinect Speech processing
+
 
 
 	}
