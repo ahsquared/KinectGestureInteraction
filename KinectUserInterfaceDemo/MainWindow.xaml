@@ -17,27 +17,27 @@
             <!--<TextBlock Canvas.Left="246" Canvas.Top="175" FontSize="46" Foreground="White" Height="101" Name="textBlock3" Text="Kinect Demo" Width="448" />-->
             <Button Canvas.Left="30" Canvas.Top="20" Height="90" Name="toggleControls" Width="180" Background="#4B5657" 
 		HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="toggleControls_Click">
-                <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Controls" Width="155" />
+                <TextBlock FontSize="36" Foreground="#221E17" Height="64" Text="Controls" Margin="0,0,10,0" />
             </Button>
             <Button Canvas.Left="30" Canvas.Top="132" Height="150" Name="button1" Width="180" Background="#4B5657" 
 		HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="button1_Click">
-                <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Afro Jams" Width="155" />
+                <TextBlock FontSize="36" Foreground="#221E17" Height="64" Text="Afro Jams" Margin="0,0,10,0"/>
             </Button>
             <Button Canvas.Left="30" Canvas.Top="303" Height="150" Name="button2" Width="180" Background="#969481" 
 		HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="button2_Click">
-                <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Berimbau" Width="155" />
+                <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Berimbau" Margin="0,0,10,0" />
             </Button>
             <Button Canvas.Left="30" Canvas.Top="480" Background="#D2C9B0" Height="150" Name="button3" Width="180" 
 		HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="button3_Click">
-                <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Jazz" Width="155" />
+                <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Jazz"  Margin="0,0,10,0"/>
             </Button>
             <Button Canvas.Left="30" Canvas.Top="653" Background="#F4E3C1" Height="150" Name="button4" Width="180" 
 		HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="button4_Click">
-                <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Button 4" Width="155" />
+                <TextBlock FontSize="28" Foreground="#332F28" Height="64" Text="Play Wildlife" Margin="0,0,10,0"/>
             </Button>
             <Button Canvas.Left="30" Canvas.Top="827" Background="#59676E" Height="150" Name="button5" Width="180" 
 		HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="button5_Click">
-                <TextBlock FontSize="36" Foreground="#332F28" Height="64" Text="Button 5" Width="155" />
+                <TextBlock FontSize="28" Foreground="#221E17" Height="64" Text="Stop Wildlife" Margin="0,0,10,0" />
             </Button>
             <Button Canvas.Left="1680" Canvas.Top="48" Background="#731311" Height="150" Name="buttonExit" Width="180" 
                     HorizontalAlignment="Right" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="buttonExit_Click">
@@ -50,58 +50,60 @@
                 </MenuItem>
                 <MenuItem Header="_Gesture"></MenuItem>
             </Menu>-->
+            <Image Name="videoImage" Height="240" Width="320" HorizontalAlignment="Right" VerticalAlignment="Bottom" Canvas.Left="1579" Canvas.Top="765"></Image>
+            <TextBlock FontSize="24" Foreground="White" Height="35" x:Name="videoTextTip" 
+				   Text="Video" Width="289" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,20,240" Canvas.Left="1586" Canvas.Top="725" />
+            <Image Name="depthImage" Height="240" Width="320" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,330,0" Canvas.Left="1259" Canvas.Top="766"></Image>
+            <TextBlock FontSize="24" Foreground="White" Height="35" x:Name="depthTextTip" 
+				   Text="Depth" Width="289" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,350,240" Canvas.Left="1266" Canvas.Top="725" />
+            <Canvas Width="320" Height="240" Name="skeletonCanvas" Background="Black" ClipToBounds="True" HorizontalAlignment="Right" VerticalAlignment="Bottom" Visibility="Visible" Canvas.Left="939" Canvas.Top="766">
+            </Canvas>
+            <TextBlock FontSize="24" Foreground="White" Height="35" x:Name="skeletonTextTip" 
+				   Text="Skeleton" Width="289" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,680,240" Canvas.Left="946" Canvas.Top="725" />
+            <Expander FontSize="24" Header="Gesture Controls" Foreground="#ffffff" Height="394" Name="gestureControls" Width="820" Canvas.Left="250" Canvas.Top="25">
+                <Expander.Style>
+                    <Style TargetType="Expander">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=toggleControls,Path=IsChecked}" Value="true">
+                                <Setter Property="IsExpanded" Value="True"></Setter>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Expander.Style>
+                <Grid Canvas.Left="1099" Canvas.Top="124">
+                    <Button Name="dtwRead" Content="Read" Click="DtwReadClick" IsEnabled="False" Background="#B6B835" FontSize="24" Height="108" Width="180" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <Button Name="dtwCapture" Content="Capture" Click="DtwCaptureClick" Background="#B6B835" FontSize="24" Height="108" Width="180" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Margin="10,128,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <Button Name="dtwStore" Content="Store" IsEnabled="False" Click="DtwStoreClick" Background="#B6B835" FontSize="24" Height="108" Width="180" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Margin="10,248,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <Button Name="dtwLoadFile" Content="Load Gestures" IsEnabled="True" Click="DtwLoadFile" Background="#B6B835" FontSize="24" Height="108" Width="180" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Margin="204,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <Button Name="dtwSaveToFile" Content="Save Gestures" IsEnabled="True" Click="DtwSaveToFile" Background="#B6B835" FontSize="24" Height="108" Width="180" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Margin="204,128,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <Button Name="dtwShowGestureTest" Content="Gesture Text" IsEnabled="True" Click="DtwShowGestureText" Background="#B6B835" FontSize="24" Height="108" Width="180" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Margin="204,248,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <ComboBox Name="gestureList" Height="50" Width="400" Margin="400,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#B6B835" FontSize="18" VerticalContentAlignment="Center">
+                        <ComboBoxItem IsSelected="True">@Right hand swipe left</ComboBoxItem>
+                        <ComboBoxItem>@Right hand swipe right</ComboBoxItem>
+                        <ComboBoxItem>@Left hand swipe left</ComboBoxItem>
+                        <ComboBoxItem>@Left hand swipe right</ComboBoxItem>
+                        <ComboBoxItem>@Two hands zoom in</ComboBoxItem>
+                        <ComboBoxItem>@Two hands zoom out</ComboBoxItem>
+                        <ComboBoxItem>@Right hand wave</ComboBoxItem>
+                        <ComboBoxItem>@Left hand wave</ComboBoxItem>
+                        <ComboBoxItem>@Right hand pull down</ComboBoxItem>
+                        <ComboBoxItem>@Left hand pull down</ComboBoxItem>
+                        <ComboBoxItem>@Right hand push up</ComboBoxItem>
+                        <ComboBoxItem>@Left hand push up</ComboBoxItem>
+                        <ComboBoxItem>@Both hands pull down</ComboBoxItem>
+                        <ComboBoxItem>@Both hands push up</ComboBoxItem>
+                        <ComboBoxItem>@Get on down at the disco!</ComboBoxItem>
+                    </ComboBox>
+                    <TextBox FontSize="18" Name="results" Focusable="False" VerticalContentAlignment="Center" BorderThickness="0" Text="Results" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="40" Margin="400,79,0,0" />
+                    <TextBox FontSize="18" Name="currentBufferFrame" Focusable="False" VerticalContentAlignment="Center" BorderThickness="0" Text="Buffer" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="40" Margin="400,179,0,0" />
+                    <TextBox FontSize="18" Name="frameRate" Focusable="False" VerticalContentAlignment="Center" BorderThickness="0" Text="frameRate" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="40" Margin="400,229,0,0" />
+                    <TextBox FontSize="18" Name="dtwTextOutput" Focusable="False" VerticalContentAlignment="Center" BorderThickness="0" Text="DTW Text Output" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="40" Margin="400,279,0,0" />
+                    <TextBox FontSize="18" Name="status" Focusable="False" BorderThickness="0" Text="Status" VerticalContentAlignment="Center" TextAlignment="Left" Width="400" Height="40" Canvas.Left="653" Canvas.Top="199" Margin="400,128,18,190" />
+                </Grid>
+            </Expander>
+            <MediaElement LoadedBehavior="Manual"  Name="videoMedia"  Source="Resources/Wildlife.wmv" Width="1280" Height="720" Canvas.Left="250" Canvas.Top="25" Visibility="Collapsed" ></MediaElement>
         </Canvas>
-        <Image Name="videoImage" Height="240" Width="320" HorizontalAlignment="Right" VerticalAlignment="Bottom"></Image>
-        <TextBlock FontSize="24" Foreground="White" Height="35" x:Name="videoTextTip" 
-				   Text="Video" Width="289" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,20,240" />
-        <Image Name="depthImage" Height="240" Width="320" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,330,0"></Image>
-        <TextBlock FontSize="24" Foreground="White" Height="35" x:Name="depthTextTip" 
-				   Text="Depth" Width="289" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,350,240" />
-        <Canvas Width="320" Height="240" Name="skeletonCanvas" Background="Black" ClipToBounds="True" Margin="0,0,660,0" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-        </Canvas>
-        <TextBlock FontSize="24" Foreground="White" Height="35" x:Name="skeletonTextTip" 
-				   Text="Skeleton" Width="289" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,680,240" />
-        <Expander FontSize="24" Header="Gesture Controls" Foreground="#ffffff" Height="394" Name="gestureControls" Width="820" Margin="252,20,826,592">
-            <Expander.Style>
-                <Style TargetType="Expander">
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding ElementName=toggleControls,Path=IsChecked}" Value="true">
-                            <Setter Property="IsExpanded" Value="True"></Setter>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Expander.Style>
-            <Grid Canvas.Left="1099" Canvas.Top="124">
-                <Button Name="dtwRead" Content="Read" Click="DtwReadClick" IsEnabled="False" Background="#B6B835" FontSize="24" Height="108" Width="180" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                <Button Name="dtwCapture" Content="Capture" Click="DtwCaptureClick" Background="#B6B835" FontSize="24" Height="108" Width="180" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Margin="10,128,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                <Button Name="dtwStore" Content="Store" IsEnabled="False" Click="DtwStoreClick" Background="#B6B835" FontSize="24" Height="108" Width="180" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Margin="10,248,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                <Button Name="dtwLoadFile" Content="Load Gestures" IsEnabled="True" Click="DtwLoadFile" Background="#B6B835" FontSize="24" Height="108" Width="180" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Margin="204,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                <Button Name="dtwSaveToFile" Content="Save Gestures" IsEnabled="True" Click="DtwSaveToFile" Background="#B6B835" FontSize="24" Height="108" Width="180" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Margin="204,128,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                <Button Name="dtwShowGestureTest" Content="Gesture Text" IsEnabled="True" Click="DtwShowGestureText" Background="#B6B835" FontSize="24" Height="108" Width="180" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Margin="204,248,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                <ComboBox Name="gestureList" Height="50" Width="400" Margin="400,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#B6B835" FontSize="18" VerticalContentAlignment="Center">
-                    <ComboBoxItem IsSelected="True">@Right hand swipe left</ComboBoxItem>
-                    <ComboBoxItem>@Right hand swipe right</ComboBoxItem>
-                    <ComboBoxItem>@Left hand swipe left</ComboBoxItem>
-                    <ComboBoxItem>@Left hand swipe right</ComboBoxItem>
-                    <ComboBoxItem>@Two hands zoom in</ComboBoxItem>
-                    <ComboBoxItem>@Two hands zoom out</ComboBoxItem>
-                    <ComboBoxItem>@Right hand wave</ComboBoxItem>
-                    <ComboBoxItem>@Left hand wave</ComboBoxItem>
-                    <ComboBoxItem>@Right hand pull down</ComboBoxItem>
-                    <ComboBoxItem>@Left hand pull down</ComboBoxItem>
-                    <ComboBoxItem>@Right hand push up</ComboBoxItem>
-                    <ComboBoxItem>@Left hand push up</ComboBoxItem>
-                    <ComboBoxItem>@Both hands pull down</ComboBoxItem>
-                    <ComboBoxItem>@Both hands push up</ComboBoxItem>
-                    <ComboBoxItem>@Get on down at the disco!</ComboBoxItem>
-                </ComboBox>
-                <TextBox FontSize="18" Name="results" Focusable="False" VerticalContentAlignment="Center" BorderThickness="0" Text="Results" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="40" Margin="400,79,0,0" />
-                <TextBox FontSize="18" Name="currentBufferFrame" Focusable="False" VerticalContentAlignment="Center" BorderThickness="0" Text="Buffer" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="40" Margin="400,179,0,0" />
-                <TextBox FontSize="18" Name="frameRate" Focusable="False" VerticalContentAlignment="Center" BorderThickness="0" Text="frameRate" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="40" Margin="400,229,0,0" />
-                <TextBox FontSize="18" Name="dtwTextOutput" Focusable="False" VerticalContentAlignment="Center" BorderThickness="0" Text="DTW Text Output" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="40" Margin="400,279,0,0" />
-                <TextBox FontSize="18" Name="status" Focusable="False" BorderThickness="0" Text="Status" VerticalContentAlignment="Center" TextAlignment="Left" Width="400" Height="40" Canvas.Left="653" Canvas.Top="199" Margin="400,128,18,190" />
-            </Grid>
-        </Expander>
+
     </Grid>
 
 </Window>

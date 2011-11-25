@@ -63,7 +63,6 @@ C:\Users\andre.h\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDe
 C:\Users\andre.h\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\obj\x86\Debug\DTWGestureRecognition.Properties.Resources.resources
 C:\Users\andre.h\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\andre.h\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\obj\x86\Debug\GenerateResource.write.1.tlog
-C:\Users\andre.h\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\OnTheWing.mp3
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.exe
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.pdb
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\obj\x86\Debug\ResolveAssemblyReference.cache
@@ -82,3 +81,7 @@ C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\afrojams.mp3
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\berimbau.mp3
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\vishnu.mp3
+C:\Users\andre.h\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\afrojams.mp3
+C:\Users\andre.h\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\berimbau.mp3
+C:\Users\andre.h\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\vishnu.mp3
+C:\Users\andre.h\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\Wildlife.wmv

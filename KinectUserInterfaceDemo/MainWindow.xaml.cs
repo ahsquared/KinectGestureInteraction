@@ -620,13 +620,19 @@ namespace DTWGestureRecognition
 
 		private void button4_Click(object sender, RoutedEventArgs e)
 		{
-			MessageBox.Show("Button 4 Clicked");
-		}
+			//MessageBox.Show("Button 4 Clicked");
+            dtwTextOutput.Text = "Play Wildlife Video";
+            videoMedia.Visibility = Visibility.Visible;
+            videoMedia.Play();
+        }
 
 		private void button5_Click(object sender, RoutedEventArgs e)
 		{
-			MessageBox.Show("Button 5 Clicked");
-		}
+			//MessageBox.Show("Button 5 Clicked");
+            dtwTextOutput.Text = "Play Wildlife Video";
+            videoMedia.Pause();
+            videoMedia.Visibility = Visibility.Collapsed;
+        }
 
 
         /// <summary>
@@ -944,6 +950,44 @@ namespace DTWGestureRecognition
                 case SpeechRecognizer.Verbs.Quit:
                     dtwTextOutput.Text = "Quit";
                     this.Close();
+                    break;
+                case SpeechRecognizer.Verbs.HideSkeleton:
+                    dtwTextOutput.Text = "Hide Skeleton";
+                    skeletonCanvas.Visibility = Visibility.Hidden;
+                    break;
+                case SpeechRecognizer.Verbs.HideDepth:
+                    dtwTextOutput.Text = "Hide Depth";
+                    depthImage.Visibility = Visibility.Hidden;
+                    break;
+                case SpeechRecognizer.Verbs.HideVideo:
+                    dtwTextOutput.Text = "Hide Video";
+                    videoImage.Visibility = Visibility.Hidden;
+                    break;
+                case SpeechRecognizer.Verbs.ShowSkeleton:
+                    dtwTextOutput.Text = "Show Skeleton";
+                    skeletonCanvas.Visibility = Visibility.Visible;
+                    break;
+                case SpeechRecognizer.Verbs.ShowDepth:
+                    dtwTextOutput.Text = "Show Depth";
+                    depthImage.Visibility = Visibility.Visible;
+                    break;
+                case SpeechRecognizer.Verbs.ShowVideo:
+                    dtwTextOutput.Text = "Show Video";
+                    videoImage.Visibility = Visibility.Visible;
+                    break;
+                case SpeechRecognizer.Verbs.PlayWildlife:
+                    dtwTextOutput.Text = "Play Wildlife Video";
+                    videoMedia.Visibility = Visibility.Visible;
+                    videoMedia.Play();
+                    break;
+                case SpeechRecognizer.Verbs.StopWildlife:
+                    dtwTextOutput.Text = "Stop Wildlife Video";
+                    videoMedia.Pause();
+                    break;
+                case SpeechRecognizer.Verbs.HideWildlife:
+                    dtwTextOutput.Text = "Hide Wildlife Video";
+                    videoMedia.Pause();
+                    videoMedia.Visibility = Visibility.Collapsed;
                     break;
             }
         }

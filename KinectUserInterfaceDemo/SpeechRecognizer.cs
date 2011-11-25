@@ -52,7 +52,16 @@ namespace DTWGestureRecognition.Speech
             Reset,
             Pause,
             Resume,
-            Quit
+            Quit,
+            HideSkeleton,
+            HideDepth,
+            HideVideo,
+            ShowSkeleton,
+            ShowDepth,
+            ShowVideo,
+            PlayWildlife,
+            StopWildlife,
+            HideWildlife
         };
 
         struct WhatSaid
@@ -106,6 +115,15 @@ namespace DTWGestureRecognition.Speech
 
         Dictionary<string, WhatSaid> SinglePhrases = new Dictionary<string, WhatSaid>()
         {
+            {"Hide Skeleton", new WhatSaid()    {verb=Verbs.HideSkeleton}},
+            {"Hide Depth", new WhatSaid()       {verb=Verbs.HideDepth}},
+            {"Hide Video", new WhatSaid()       {verb=Verbs.HideVideo}},
+            {"Show Skeleton", new WhatSaid()    {verb=Verbs.ShowSkeleton}},
+            {"Show Depth", new WhatSaid()       {verb=Verbs.ShowDepth}},
+            {"Show Video", new WhatSaid()       {verb=Verbs.ShowVideo}},
+            {"Play Wildlife", new WhatSaid()    {verb=Verbs.PlayWildlife}},
+            {"Stop Wildlife", new WhatSaid()    {verb=Verbs.StopWildlife}},
+            {"Hide Wildlife", new WhatSaid()    {verb=Verbs.HideWildlife}},
             {"Speed Up", new WhatSaid()         {verb=Verbs.Faster}},
             {"Slow Down", new WhatSaid()        {verb=Verbs.Slower}},
             {"Reset", new WhatSaid()            {verb=Verbs.Reset}},
@@ -119,7 +137,7 @@ namespace DTWGestureRecognition.Speech
             {"Play", new WhatSaid()             {verb=Verbs.Resume}},
             {"Start", new WhatSaid()            {verb=Verbs.Resume}},
             {"Go", new WhatSaid()               {verb=Verbs.Resume}},
-            {"Quit", new WhatSaid()             {verb=Verbs.Quit}}
+            {"Quit", new WhatSaid()             {verb=Verbs.Quit}},
         };
         #endregion Grammar Data
 
@@ -269,9 +287,12 @@ namespace DTWGestureRecognition.Speech
 
         void sre_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
-            System.Diagnostics.Debug.Write("\rSpeech Recognized: \t{0} - huh?" + e.Result.Text + "\n");
+            System.Diagnostics.Debug.Write("\rSpeech Recognized: \t{0}" + e.Result.Text + ", Confidence: " + e.Result.Confidence + "\n");
 
             if (SaidSomething == null)
+                return;
+
+            if (e.Result.Confidence < 0.7)
                 return;
 
             var said = new SaidSomethingEventArgs();
@@ -301,20 +322,20 @@ namespace DTWGestureRecognition.Speech
             if (!found)
                 return;
 
-            if (paused) // Only accept restart or reset
-            {
-                if ((said.Verb != Verbs.Resume) && (said.Verb != Verbs.Reset))
-                    return;
-                paused = false;
-            }
-            else
-            {
-                if (said.Verb == Verbs.Resume)
-                    return;
-            }
+            //if (paused) // Only accept restart or reset
+            //{
+            //    if ((said.Verb != Verbs.Resume) && (said.Verb != Verbs.Reset))
+            //        return;
+            //    paused = false;
+            //}
+            //else
+            //{
+            //    if (said.Verb == Verbs.Resume)
+            //        return;
+            //}
 
-            if (said.Verb == Verbs.Pause)
-                paused = true;
+            //if (said.Verb == Verbs.Pause)
+            //    paused = true;
 
             if (SaidSomething != null)
             {
