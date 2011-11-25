@@ -85,3 +85,4 @@ C:\Users\andre.h\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDe
 C:\Users\andre.h\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\berimbau.mp3
 C:\Users\andre.h\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\vishnu.mp3
 C:\Users\andre.h\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\Wildlife.wmv
+C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\Wildlife.wmv

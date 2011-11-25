@@ -61,7 +61,8 @@ namespace DTWGestureRecognition.Speech
             ShowVideo,
             PlayWildlife,
             StopWildlife,
-            HideWildlife
+            HideWildlife,
+            ResetWildlife
         };
 
         struct WhatSaid
@@ -124,6 +125,7 @@ namespace DTWGestureRecognition.Speech
             {"Play Wildlife", new WhatSaid()    {verb=Verbs.PlayWildlife}},
             {"Stop Wildlife", new WhatSaid()    {verb=Verbs.StopWildlife}},
             {"Hide Wildlife", new WhatSaid()    {verb=Verbs.HideWildlife}},
+            {"Reset Wildlife", new WhatSaid()   {verb=Verbs.ResetWildlife}},
             {"Speed Up", new WhatSaid()         {verb=Verbs.Faster}},
             {"Slow Down", new WhatSaid()        {verb=Verbs.Slower}},
             {"Reset", new WhatSaid()            {verb=Verbs.Reset}},

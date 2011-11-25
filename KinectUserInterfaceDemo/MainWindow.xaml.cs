@@ -66,7 +66,8 @@ namespace DTWGestureRecognition
         /// <summary>
         /// Where we will save our gestures to. The app will append a data/time and .txt to this string
         /// </summary>
-        private const string GestureSaveFileLocation = @"C:\Users\andre.h\Documents\Kinect\kinectdtw - Exp 03d\trunk\DTWGestureRecognition\";
+        private string GestureSaveFileLocation = System.AppDomain.CurrentDomain.BaseDirectory.ToString() + "Resources";
+        //private const string GestureSaveFileLocation = @"C:\Users\andre.h\Documents\Kinect\kinectdtw - Exp 03d\trunk\DTWGestureRecognition\";
 
         /// <summary>
         /// Where we will save our gestures to. The app will append a data/time and .txt to this string
@@ -164,9 +165,11 @@ namespace DTWGestureRecognition
 
         private List<Button> buttons;
         private List<Button> gestureButtons;
+        private List<ComboBox> gestureCombos;
 
         private static bool _isClosing = false;
         private static Button _selectedButton = null;
+        private static ComboBox _selectedCombo = null;
 
         private static bool _controlsOpen = false;
 
@@ -279,6 +282,10 @@ namespace DTWGestureRecognition
                     dtwSaveToFile,
                     dtwShowGestureTest
                 };
+            gestureCombos = new List<ComboBox>
+            {
+                gestureList
+            };
 		}
 
         /// <summary>
@@ -534,11 +541,11 @@ namespace DTWGestureRecognition
 														Z = joinCursorHand.Position.Z
 													}
 									};
-			OnButtonLocationChanged(kinectButton, buttons, gestureButtons, (int)scaledCursorJoint.Position.X, (int)scaledCursorJoint.Position.Y);
+			OnButtonLocationChanged(kinectButton, buttons, gestureButtons, gestureCombos, (int)scaledCursorJoint.Position.X, (int)scaledCursorJoint.Position.Y);
 		}
-		private static void OnButtonLocationChanged(HoverButton hand, List<Button> buttons, List<Button> gestureButtons, int X, int Y)
+		private static void OnButtonLocationChanged(HoverButton hand, List<Button> buttons, List<Button> gestureButtons, List<ComboBox> gestureCombos, int X, int Y)
 		{
-			if (IsButtonOverObject(hand, buttons, gestureButtons)) hand.Hovering(); else hand.Release();
+			if (IsButtonOverObject(hand, buttons, gestureButtons, gestureCombos)) hand.Hovering(); else hand.Release();
 
 			Canvas.SetLeft(hand, X - (hand.ActualWidth / 2));
 			Canvas.SetTop(hand, Y - (hand.ActualHeight / 2));
@@ -546,10 +553,20 @@ namespace DTWGestureRecognition
 		void kinectButton_Clicked(object sender, RoutedEventArgs e)
 		{
 			//call the click event of the selected button
-            _selectedButton.RaiseEvent(new RoutedEventArgs(ButtonBase.ClickEvent, _selectedButton));
+            if (_selectedButton != null)
+            {
+                _selectedButton.RaiseEvent(new RoutedEventArgs(ButtonBase.ClickEvent, _selectedButton));
+                _selectedButton = null;
+            }
+            if (_selectedCombo != null)
+            {
+                _selectedCombo.IsDropDownOpen = true;
+                _selectedCombo = null;
+            }
+
 
 		}
-		public static bool IsButtonOverObject(FrameworkElement hand, List<Button> buttons, List<Button> gestureButtons)
+		public static bool IsButtonOverObject(FrameworkElement hand, List<Button> buttons, List<Button> gestureButtons, List<ComboBox> gestureCombos)
 		{
 			if (_isClosing || !Window.GetWindow(hand).IsActive) return false;
 
@@ -569,6 +586,18 @@ namespace DTWGestureRecognition
                         && _handLeft < targetTopLeft.Y + target.ActualHeight)
                     {
                         _selectedButton = target;
+                        return true;
+                    }
+                }
+                foreach (ComboBox target in gestureCombos)
+                {
+                    Point targetTopLeft = target.PointToScreen(new Point());
+                    if (_handTop > targetTopLeft.X
+                        && _handTop < targetTopLeft.X + target.ActualWidth
+                        && _handLeft > targetTopLeft.Y
+                        && _handLeft < targetTopLeft.Y + target.ActualHeight)
+                    {
+                        _selectedCombo = target;
                         return true;
                     }
                 }
@@ -983,6 +1012,10 @@ namespace DTWGestureRecognition
                 case SpeechRecognizer.Verbs.StopWildlife:
                     dtwTextOutput.Text = "Stop Wildlife Video";
                     videoMedia.Pause();
+                    break;
+                case SpeechRecognizer.Verbs.ResetWildlife:
+                    dtwTextOutput.Text = "Reset Wildlife Video";
+                    videoMedia.Position = TimeSpan.FromSeconds(0);
                     break;
                 case SpeechRecognizer.Verbs.HideWildlife:
                     dtwTextOutput.Text = "Hide Wildlife Video";
