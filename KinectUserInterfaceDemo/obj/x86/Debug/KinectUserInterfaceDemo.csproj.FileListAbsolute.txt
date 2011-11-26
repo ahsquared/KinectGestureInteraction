@@ -86,3 +86,8 @@ C:\Users\andre.h\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDe
 C:\Users\andre.h\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\vishnu.mp3
 C:\Users\andre.h\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\Wildlife.wmv
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\Wildlife.wmv
+C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\KinectUserInterfaceDemo.exe.manifest
+C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\KinectUserInterfaceDemo.application
+C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Coding4Fun.Kinect.Wpf.dll
+C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.exe.manifest
+C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.application
