@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("library/ventuz.osc.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/afrojams.mp3")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/berimbau.mp3")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/vishnu.mp3")]

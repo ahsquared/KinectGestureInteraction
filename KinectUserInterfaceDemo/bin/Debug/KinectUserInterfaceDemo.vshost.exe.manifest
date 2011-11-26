@@ -69,14 +69,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KinectUserInterfaceDemo.exe" size="52224">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KinectUserInterfaceDemo.exe" size="96768">
       <assemblyIdentity name="KinectUserInterfaceDemo" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ZroE7ZAp4W6cXUYKJKXvqQoW9+U=</dsig:DigestValue>
+        <dsig:DigestValue>sW8YTnEx+FpssOhmoWqrXCjQgXo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -92,13 +92,25 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Library\Coding4Fun.Kinect.Wpf.dll" size="18944">
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Ventuz.OSC.dll" size="33792">
+      <assemblyIdentity name="Ventuz.OSC" version="1.4.1.0" publicKeyToken="53B1E9EEE2BFF606" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>9LhhG4ZC2Ld3PiDR9GJvzEa2a5o=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Library\Ventuz.OSC.dll" size="33792">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>2NujXTzKqtc+KjiOQ8m0+j42GBs=</dsig:DigestValue>
+      <dsig:DigestValue>9LhhG4ZC2Ld3PiDR9GJvzEa2a5o=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\afrojams.mp3" size="1041135">

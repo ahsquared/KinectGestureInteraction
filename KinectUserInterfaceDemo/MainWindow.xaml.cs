@@ -17,6 +17,8 @@ using Microsoft.Research.Kinect.Audio;
 using Microsoft.Research.Kinect.Nui;
 using Nui = Microsoft.Research.Kinect.Nui;
 using DTWGestureRecognition.Speech;
+using Ventuz.OSC;
+
 
 namespace DTWGestureRecognition
 {
@@ -177,6 +179,10 @@ namespace DTWGestureRecognition
         SpeechRecognizer speechRecognizer = null;
 
 
+        // OSC 
+        private static UdpWriter oscWriter;
+        private static string[] oscArgs = new string[2];
+
 		public MainWindow()
 		{
 			InitializeComponent();
@@ -192,6 +198,12 @@ namespace DTWGestureRecognition
 		void MainWindow_Loaded(object sender, RoutedEventArgs e)
 		{
 			InitializeButtons();
+
+            // Setup osc sender
+            oscArgs[0] = "127.0.0.1";
+            oscArgs[1] = "3333";
+            oscWriter = new UdpWriter(oscArgs[0], Convert.ToInt32(oscArgs[1]));
+
 			//Since only a color video stream is needed, RuntimeOptions.UseColor is used.
 			_runtime.Initialize(RuntimeOptions.UseDepthAndPlayerIndex | Microsoft.Research.Kinect.Nui.RuntimeOptions.UseColor | RuntimeOptions.UseSkeletalTracking);
 			_runtime.SkeletonEngine.TransformSmooth = true;
@@ -245,7 +257,6 @@ namespace DTWGestureRecognition
                 dtwTextOutput.Text = "No Speech";
                 speechRecognizer = null;
             }
-
 
 		}
 		void MainWindow_Unloaded(object sender, RoutedEventArgs e)
@@ -461,6 +472,13 @@ namespace DTWGestureRecognition
                         jointLine.Stroke = _jointColors[joint.ID];
                         jointLine.StrokeThickness = 6;
                         skeletonCanvas.Children.Add(jointLine);
+
+                        // send joint positions as OSC
+                        List<OscElement> elements = new List<OscElement>();
+                        elements.Add(new OscElement("/nui/skeleton/" + joint.ID, "X", (float)jointPos.X));
+                        elements.Add(new OscElement("/nui/skeleton/" + joint.ID, "Y", (float)jointPos.Y));
+                        SendALive(new OscBundle(DateTime.Now, elements.ToArray()));
+
                     }
                 }
 
@@ -1026,8 +1044,17 @@ namespace DTWGestureRecognition
         }
         #endregion Kinect Speech processing
 
+        #region OSC
+
+        private static void SendALive(OscBundle bundle)
+        {
+            oscWriter.SendBundle(bundle);
+
+            //DisplayBundle(bundle);
+        }
 
 
-	}
+        #endregion
+    }
 
 }

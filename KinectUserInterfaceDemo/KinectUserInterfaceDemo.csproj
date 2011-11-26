@@ -88,6 +88,10 @@
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="UIAutomationProvider" />
+    <Reference Include="Ventuz.OSC, Version=1.4.1.0, Culture=neutral, PublicKeyToken=53b1e9eee2bff606, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Ventuz.OSC.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -168,6 +172,8 @@
   <ItemGroup>
     <None Include="Library\Coding4Fun.Kinect.Wpf.dll" />
     <None Include="Library\Microsoft.Expression.Drawing.dll" />
+    <Content Include="Library\Ventuz.OSC.dll" />
+    <Resource Include="Library\Ventuz.OSC.xml" />
     <Content Include="Resources\afrojams.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

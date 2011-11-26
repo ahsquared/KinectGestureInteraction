@@ -75,7 +75,6 @@ C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\obj\x86\Debug\DTWGestureRecognition.Properties.Resources.resources
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\obj\x86\Debug\GenerateResource.write.1.tlog
-C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Microsoft.Expression.Drawing.xml
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\KinectUserInterfaceDemo.exe
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\KinectUserInterfaceDemo.pdb
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Resources\afrojams.mp3
@@ -91,3 +90,6 @@ C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Coding4Fun.Kinect.Wpf.dll
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.exe.manifest
 C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.application
+C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Microsoft.Expression.Drawing.dll
+C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Ventuz.OSC.dll
+C:\Users\Andre\Documents\Kinect\KinectGestureInteraction\KinectUserInterfaceDemo\bin\Debug\Ventuz.OSC.xml
